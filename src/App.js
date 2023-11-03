@@ -1,7 +1,6 @@
 import Obituary from "./Obituary";
 import AddObit from "./AddObit";
 import { useEffect, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 
 function App() {
 
@@ -95,7 +94,7 @@ function App() {
       {!isOpen ? (<></>) : (<AddObit closePop={closePop}/>)}
       <header>
         <button id="invis-button">+ New Obituary</button>
-        <h1>The Last Show</h1>
+        <h1>Obituary Generator</h1>
         <button onClick={openPop}>+ New Obituary</button>
       </header>
       <section id="obits">
