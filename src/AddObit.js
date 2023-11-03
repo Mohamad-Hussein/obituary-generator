@@ -3,10 +3,11 @@ import { v4 as uuidv4 } from 'uuid';
 
 function AddObit({ closePop }){
     // Timezone
+    var hour = '';
     var dateString = new Date().toLocaleString('en-CA', { timeZone: 'America/Edmonton', hour12:false });
     if (dateString.slice(12,14) === "24"){
-        var hour = "00";
-    } else{var hour = dateString.slice(12,14);}
+        hour = "00";
+    } else{hour = dateString.slice(12,14);}
     var time = dateString.slice(0,10) + "T" + hour + dateString.slice(14,20);
     console.log("Current time is: " + time);
     // Just discovered you can put emojis in code 😂
@@ -46,7 +47,7 @@ function AddObit({ closePop }){
             );
             try{
                 const response_content = await res.json();
-                const values = JSON.parse(response_content);
+                // const values = JSON.parse(response_content);
             }   catch{
             }
             

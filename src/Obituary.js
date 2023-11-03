@@ -1,8 +1,7 @@
 import React from 'react';
-import {useState} from 'react';
 
-function Obituary({obit, currentAudio, onPlay, onStop, created}){
-    const [audio, setAudio] = useState(obit ? new Audio(obit.audio) : null);
+function Obituary({obit, onPlay, onStop, created}){
+    const audio = (obit ? new Audio(obit.audio) : null);
     
     const toggle = () => {
         const btn = document.getElementById("btn-" + obit.id);
